@@ -9,5 +9,8 @@ all: $(TARGETS)
 watch: $(SOURCES)
 	latexmk -bibtex -pvc -pdf $(<:.tex=)
 
+spell: $(SOURCES)
+	aspell --lang=en --mode=tex -c $<
+
 clean:
 	latexmk -C -bibtex -pdf

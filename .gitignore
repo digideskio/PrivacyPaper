@@ -4,11 +4,11 @@
 *.aux
 *.log
 *.out
+*.dvi
 
 # BibTeX
 *.bbl
 *.blg
-
 
 # Data and figures
 /data/*.tex

@@ -16,3 +16,6 @@
 /data/weeks/
 /data/*.txt
 !/data/user_agents.txt
+
+# Papers
+/papers/

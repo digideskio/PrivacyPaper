@@ -1,1 +1,18 @@
+# Ignore LaTeX output
 *.pdf
+*.eps
+*.aux
+*.log
+*.out
+
+# BibTeX
+*.bbl
+*.blg
+
+
+# Data and figures
+/data/*.tex
+/figures/*.tex
+/data/weeks/
+/data/*.txt
+!/data/user_agents.txt

@@ -1,7 +1,7 @@
 SOURCES=$(wildcard *.gnuplot)
 TARGETS=$(SOURCES:.gnuplot=.tex) $(SOURCES:.gnuplot=.pdf)
 
-all: notice $(TARGETS) user_agents_table.tex 
+all: notice $(TARGETS)
 
 notice:
 	@echo "NOTE: You may have to run make twice (when make complains)"
@@ -18,8 +18,3 @@ clean:
 	rm -f *.tex
 	rm -f *.eps
 	rm -f *.pdf
-
-
-user_agents_table.tex: ../data/user_agents.txt
-	cat ../data/user_agents.txt | sed 's/|/ \& /g ; s/$$/\\\\/' > user_agents_table.tex
-

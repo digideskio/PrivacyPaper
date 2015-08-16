@@ -1,0 +1,9 @@
+Use AboutTheses.pdf for a pre-built pdf of template.tex.
+
+To build it yourself, first run "make" in data/ once, then run make in figures/ (twice), and finally build template.tex.
+
+Build requirements for data/ and figures/: You need to have 
+	* make, 
+	* gnuplot and 
+	* epstopdf 
+in your PATH (as well as bash, awk, sed, etc). I only tested it on OS X, but any BSD userland should do fine (linux could work as well).

@@ -5,7 +5,7 @@ all: $(TARGETS)
 
 %.pdf: %.tex
 	pdflatex $(<:.tex=)
-	bibtex $(<:.tex=)
+	- bibtex $(<:.tex=)
 	pdflatex $(<:.tex=)
 	pdflatex $(<:.tex=)
 

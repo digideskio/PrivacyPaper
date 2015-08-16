@@ -4,10 +4,10 @@ TARGETS=$(SOURCES:.tex=.pdf)
 all: $(TARGETS)
 
 %.pdf: %.tex
-	pdflatex $(<:.tex=)
-	- bibtex $(<:.tex=)
-	pdflatex $(<:.tex=)
-	pdflatex $(<:.tex=)
+	latexmk -bibtex -pv -pdf $(<:.tex=)
+
+watch: $(SOURCES)
+	latexmk -bibtex -pvc -pdf $(<:.tex=)
 
 clean:
-	rm -f *.aux *.bbl *.blg *.log *.out *.pdf
+	latexmk -C -bibtex -pdf

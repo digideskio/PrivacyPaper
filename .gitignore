@@ -5,6 +5,8 @@
 *.log
 *.out
 *.dvi
+*.fls
+*.fdb_latexmk
 
 # BibTeX
 *.bbl
